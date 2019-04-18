@@ -1,5 +1,6 @@
-FROM jetbrains/teamcity-agent
-COPY setup/java.security /opt/java/openjdk/jre/lib/security/
+FROM jetbrains/teamcity-agent:2017.1.5
+
+COPY setup/java.security /usr/lib/jvm/oracle-jdk/jre/lib/security/
 
 RUN apt-get update && \
 	apt-get install -y build-essential && \
